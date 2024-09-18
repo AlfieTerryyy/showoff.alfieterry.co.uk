@@ -21,36 +21,11 @@
             <div id="story" class="brutalist-card__message">
                 <p>Right, let's start!</p>
                 <p>You are in the ICT Staff Office. There are 3 laptops in front of you. These will help later. Which will you take?</p>
-                <a href="#" class="game-card__button" onclick="chooseDirection('north')">Acer Chromebook 114®</a>
-                <a href="#" class="game-card__button" onclick="chooseDirection('east')">Lenovo ThinkPad P1 Gen 7® </a>
-                <a href="#" class="game-card__button" onclick="chooseDirection('south')">HP Envy x360 16-ac0009na®</a>
+                <a href="https://trinity.alfieterry.co.uk/mission/a1/laptop1" class="game-card__button">Acer Chromebook 114®</a>
+                <a href="https://trinity.alfieterry.co.uk/mission/a1/laptop2" class="game-card__button">Lenovo ThinkPad P1 Gen 7® </a>
+                <a href="https://trinity.alfieterry.co.uk/mission/a1/laptop3" class="game-card__button">HP Envy x360 16-ac0009na®</a>
             </div>
         </div>
     </div>
-
-    <script>
-        function chooseDirection(direction) {
-            let url = '';
-
-            switch(direction) {
-                case 'north':
-                    url = 'https://trinity.alfieterry.co.uk/mission/a1/laptop1';
-                    break;
-                case 'east':
-                    url = 'https://trinity.alfieterry.co.uk/mission/a1/laptop2';
-                    break;
-                case 'south':
-                    url = 'https://trinity.alfieterry.co.uk/mission/a1/laptop3';
-                    break;
-                default:
-                    alert('Invalid choice. Please try again.');
-                    return; // Exit function if direction is invalid
-            }
-
-            if (url) {
-                window.location.href = url;
-            }
-        }
-    </script>
 </body>
 </html>
