@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-card">
+            <div class="game-card__header">
+                <div class="game-card__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2a10 10 0 0 0-10 10v6h20v-6a10 10 0 0 0-10-10zm-5 14v-4h2v4h-2zm4 0v-6h2v6h-2zm4 0v-8h2v8h-2z"/></svg>
+                </div>
+                <div class="game-card__alert">Choose Your Path</div>
+            </div>
+            <div id="story" class="brutalist-card__message">
+                <p>Welcome to the Adventure Game!</p>
+                <p>You find yourself in a mysterious forest. Where would you like to go?</p>
+                <a href="#" class="game-card__button" onclick="chooseDirection('north')">Go North</a>
+                <a href="#" class="game-card__button" onclick="chooseDirection('east')">Go East</a>
+                <a href="#" class="game-card__button" onclick="chooseDirection('south')">Go South</a>
+                <a href="#" class="game-card__button" onclick="chooseDirection('west')">Go West</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
