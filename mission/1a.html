@@ -11,22 +11,46 @@
         <div class="game-card">
             <div class="game-card__header">
                 <div class="game-card__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 2a10 10 0 0 0-10 10v6h20v-6a10 10 0 0 0-10-10zm-5 14v-4h2v4h-2zm4 0v-6h2v6h-2zm4 0v-8h2v8h-2z"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M12 2a10 10 0 0 0-10 10v6h20v-6a10 10 0 0 0-10-10zm-5 14v-4h2v4h-2zm4 0v-6h2v6h-2zm4 0v-8h2v8h-2z"/>
+                    </svg>
                 </div>
                 <div class="game-card__alert">Choose Your Path</div>
             </div>
             <div id="story" class="brutalist-card__message">
-                <p>Right Lets start!</p>
-                <p>We should probably look at the map!</p>
-                <a href="https://trinity.alfieterry.co.uk/map" target="_blank" class="game-card__button">Map</a>
-                <a href="#" class="game-card__button" onclick="choose('1a_')">Go North</a>
-                <a href="#" class="game-card__button" onclick="choose('1a_')">Go East</a>
-                <a href="#" class="game-card__button" onclick="choose('1a_')">Go South</a>
-                <a href="#" class="game-card__button" onclick="choose('1a_')">Go West</a>
+                <p>Right, let's start!</p>
+                <p>You are in the ICT Staff Office. There are 3 laptops in front of you. These will help later. Which will you take?</p>
+                <a href="#" class="game-card__button" onclick="chooseDirection('north')">Go North</a>
+                <a href="#" class="game-card__button" onclick="chooseDirection('east')">Go East</a>
+                <a href="#" class="game-card__button" onclick="chooseDirection('south')">Go South</a>
             </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function chooseDirection(direction) {
+            let url = '';
+
+            switch(direction) {
+                case 'north':
+                    url = 'https://example.com/north';
+                    break;
+                case 'east':
+                    url = 'https://example.com/east';
+                    break;
+                case 'south':
+                    url = 'https://example.com/south';
+                    break;
+                default:
+                    alert('Invalid choice. Please try again.');
+                    return; // Exit function if direction is invalid
+            }
+
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
 </body>
 </html>
